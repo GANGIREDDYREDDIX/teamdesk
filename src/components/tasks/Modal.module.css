@@ -1,0 +1,50 @@
+.inputError { border-color: var(--color-danger) !important; }
+.inputError:focus { box-shadow: 0 0 0 3px rgba(220,38,38,0.15) !important; }
+
+.employeeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.employeeChip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+.employeeChip:hover { border-color: var(--color-blue); background: var(--color-blue-light); }
+.employeeChip.selected { border-color: var(--color-blue); background: var(--color-blue-light); }
+
+.optionalSection {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.optionalToggle {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  background: var(--color-bg);
+  list-style: none;
+  user-select: none;
+}
+.optionalToggle:hover { color: var(--color-text-primary); }
+
+details[open] .optionalToggle {
+  border-bottom: 1px solid var(--color-border);
+}
+
+details > div {
+  padding: var(--space-4);
+}
